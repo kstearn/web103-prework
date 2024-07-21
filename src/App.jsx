@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Outlet, Link } from 'react-router-dom';
 import { supabase } from './client';
 import ShowCreators from './pages/ShowCreators';
+import Header from './components/Header';
 
 import './App.css';
 
@@ -12,7 +12,8 @@ function App() {
     const fetchData = async () => {
       let { data, error } = await supabase
       .from('creators')
-      .select('*');
+      .select('*')
+      .order('id', { ascending: false });
 
       setCreators(data);
     }
@@ -20,11 +21,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <nav>
-      </nav>
+    <div className="App">
+      <Header />
       <ShowCreators creators={creators} />
-      <Outlet />
     </div>
   )
 }

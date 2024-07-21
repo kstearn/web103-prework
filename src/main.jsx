@@ -11,11 +11,10 @@ import ViewCreator from './pages/ViewCreator';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="view" element={<ViewCreator />} />
-        <Route path="add" element={<AddCreator />} />
-        <Route path="edit" element={<EditCreator />} />
-      </Route>
+      <Route path="/" element={<App />} />
+      <Route path="view/:id" element={<ViewCreator />} />
+      <Route path="add" element={<AddCreator />} />
+      <Route path="edit/:id" element={<EditCreator />} />
     </Routes>
   </BrowserRouter>,
 )

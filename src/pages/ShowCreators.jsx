@@ -2,10 +2,7 @@ import Card from '../components/Card';
 
 const ShowCreators = ({ creators }) => {
     return(
-        <div>
-            <button className="addButton">
-                Add Creator
-            </button>
+        <div className="ShowCreators">
             {creators.length == 0 ?
                 <div>No creators yet!</div>
                 :
