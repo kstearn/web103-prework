@@ -4,7 +4,7 @@ Submitted by: **Katelyn Stearn**
 
 About this web app: **This app allows the user to view a list of all creators, view a specific creator, add new creators, and edit or delete creators.**
 
-Time spent: **5** hours
+Time spent: **6** hours
 
 ## Required Features
 
@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 - [X] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
 - [X] **Each content creator has their own unique URL**
 - [X] **The user can edit a content creator to change their name, url, or description**
-- [ ] **The user can delete a content creator**
+- [X] **The user can delete a content creator**
 - [X] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
 The following **optional** features are implemented:
