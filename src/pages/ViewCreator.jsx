@@ -40,7 +40,7 @@ const ViewCreator = () => {
     }
 
     return(
-        <div>
+        <div className="App">
             <Header />
             {creator ? 
             <div>

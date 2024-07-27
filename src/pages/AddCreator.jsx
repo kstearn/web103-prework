@@ -30,39 +30,41 @@ const AddCreator = () => {
     }
 
     return(
-        <div>
+        <div className="App">
             <Header />
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:
+                <label>Name:
                     <input name="name"
                     value={inputs.name || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
                 <br></br>
-                <br></br>
 
-                <label htmlFor="url">Social Media URL:
+                <label>Social Media URL:
                     <input name="url"
                     value={inputs.url || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
                 <br></br>
-                <br></br>
 
-                <label htmlFor="description">Description:
-                    <input name="description"
+                <label>Description: 
+                    <textarea name="description"
                     value={inputs.description || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange} 
+                    rows={5}
+                    cols={50} 
+                    maxLength={500} />
                 </label>
                 <br></br>
-                <br></br>
 
-                <label htmlFor="imageUrl">Image URL:
+                <label>Image URL:
                     <input name="imageUrl"
                     value={inputs.imageUrl || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
-                <br></br>
                 <br></br>
 
                 <button type="submit">Add Creator</button>

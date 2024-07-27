@@ -49,36 +49,38 @@ const EditCreator = ({ creator }) => {
         <div>
             <Header />
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name:
+                <label>Name:
                     <input name="name"
                     value={inputs && inputs.name || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
-                <br></br>
                 <br></br>
 
-                <label htmlFor="url">Social Media URL:
+                <label>Social Media URL:
                     <input name="url"
                     value={inputs && inputs.url || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
-                <br></br>
                 <br></br>
 
                 <label htmlFor="description">Description:
                     <textarea name="description"
                     value={inputs && inputs.description || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    rows={5}
+                    cols={50} 
+                    maxLength={500} />
                 </label>
-                <br></br>
                 <br></br>
 
                 <label htmlFor="imageUrl">Image URL:
                     <input name="imageUrl"
                     value={inputs && inputs.imageURL || ""}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    maxLength={200} />
                 </label>
-                <br></br>
                 <br></br>
 
                 <button type="submit">Save</button>
