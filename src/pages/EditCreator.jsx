@@ -65,7 +65,7 @@ const EditCreator = ({ creator }) => {
                 </label>
                 <br></br>
 
-                <label htmlFor="description">Description:
+                <label>Description:
                     <textarea name="description"
                     value={inputs && inputs.description || ""}
                     onChange={handleChange}
@@ -75,8 +75,8 @@ const EditCreator = ({ creator }) => {
                 </label>
                 <br></br>
 
-                <label htmlFor="imageUrl">Image URL:
-                    <input name="imageUrl"
+                <label>Image URL:
+                    <input name="imageURL"
                     value={inputs && inputs.imageURL || ""}
                     onChange={handleChange}
                     maxLength={200} />
