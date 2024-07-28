@@ -6,12 +6,14 @@ const Card = ({ creator }) => {
             <div className="image-name-container">
                 <img src={creator.imageURL}></img>
                 <h2>{creator.name}</h2>
+                <a href={creator.url}>
+                    <img src={"youtube-app-white-icon.png"} />
+                </a>
             </div>
             <div className="description-container">
-                <p>{creator.url}</p>
                 <p>{creator.description}</p>
             </div>
-            <Link to={`view/${creator.id}`}>
+            <Link to={`view/${creator.id}`} className="view-button">
                 <button>View</button>
             </Link>
         </div>

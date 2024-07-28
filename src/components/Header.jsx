@@ -6,10 +6,10 @@ const Header = () => {
             <h1>Creatorverse</h1>
             <nav>
                 <Link to="/">
-                    <button>View All</button>
+                    <button>View All Creators</button>
                 </Link>
                 <Link to="/add">
-                    <button>Create New</button>
+                    <button>Add New Creator</button>
                 </Link>
             </nav>
         </header>

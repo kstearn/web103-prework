@@ -46,7 +46,7 @@ const EditCreator = ({ creator }) => {
     }
 
     return(
-        <div>
+        <div className="App">
             <Header />
             <form onSubmit={handleSubmit}>
                 <label>Name:

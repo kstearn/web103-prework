@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+#root {
+  width: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -21,8 +28,14 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(36, 36, 36, 0.9);
-  padding-bottom: 10px;
+  background-color: rgba(74, 87, 89, 0.9);
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: "Lilita One";
+  font-size: 70px !important;
+  margin: 30px 0;
 }
 
 nav {
@@ -43,8 +56,8 @@ nav {
 }
 
 .Card {
-  background-color: gray;
-  height: 300px;
+  background-color: rgb(74, 87, 89);
+  height: 275px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,15 +76,31 @@ nav {
   gap: 10px;
 }
 
-.Card img {
+.image-name-container img {
   width: 100px;
   border-radius: 50%;
+}
+
+.image-name-container a {
+  width: 30px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.image-name-container a img {
+  width: 40px;
 }
 
 .description-container {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-top: 5px;
+}
+
+.Card .view-button {
+  margin-top: auto;
+  margin-bottom: 5px;
 }
 
 .DeleteModal {
@@ -80,8 +109,9 @@ nav {
   justify-content: center;
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
-  background-color: black;
-  border: 2px solid rgb(240, 240, 240);
+  background-color: rgb(247, 225, 215);
+  border: 2px solid rgb(237, 175, 184);
+  color: black;
   border-radius: 12px;
   position:  absolute;
   width: 400px;
@@ -97,11 +127,20 @@ nav {
   align-items: center;
 }
 
+.DeleteModal button {
+  color: white;
+  background-color: rgb(74, 87, 89);
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(74, 87, 89);
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 label {
@@ -116,11 +155,44 @@ label {
 
 input {
   margin-top: 5px;
-  line-height: 20px;
   font-size: 1em;
 }
 
 textarea {
   margin-top: 5px;
   font-size: 1em;
+}
+
+input, textarea {
+  background-color : rgb(247, 225, 215); 
+  color: black;
+}
+
+input:focus, textarea:focus {
+  outline: none !important;
+  border: 2px solid rgb(237, 175, 184)
+}
+
+.ViewCreator,
+.EditCreator {
+  background-color: rgb(74, 87, 89);
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.ViewCreator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ViewCreator .buttons-container {
+  width: 30%;
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.CreatorDetails {
+  width: 100%;
 }

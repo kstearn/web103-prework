@@ -43,20 +43,22 @@ const ViewCreator = () => {
         <div className="App">
             <Header />
             {creator ? 
-            <div>
+            <div className="ViewCreator">
                 <CreatorDetails creator={creator} />
-                <Link to={`/edit/${creator.id}`}>
-                    <button>
-                        Edit
+                <div className="buttons-container">
+                    <Link to={`/edit/${creator.id}`}>
+                        <button>
+                            Edit
+                        </button>
+                    </Link>
+                    <button onClick={() => setShowModal(true)}>
+                        Delete
                     </button>
-                </Link>
-                <button onClick={() => setShowModal(true)}>
-                    Delete
-                </button>
-                {showModal && createPortal(
-                    <DeleteModal onClose={() => setShowModal(false)} handleDelete={handleDelete} />,
-                    document.body
-                )}
+                    {showModal && createPortal(
+                        <DeleteModal onClose={() => setShowModal(false)} handleDelete={handleDelete} />,
+                        document.body
+                    )}
+                </div>
             </div>
             :
             <div>
